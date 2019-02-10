@@ -16,19 +16,18 @@ const sequence$: Observable<Object[]> = fromEvent(el, 'input').pipe(
   distinctUntilChanged(),
   switchMap((value: string) => search(value).pipe(
     catchError(() => {
-      return of([{}]);
+      return of([]);
     })))
 );
 
 const div: HTMLElement = document.getElementById('list');
 
 sequence$.subscribe((ev: Object[]) => {
-  if (Object.keys(ev[0]).length === 0) {
-    div.innerHTML = '';
+  div.innerHTML = '';
+  if (ev === undefined) {
     return;
   }
   const ul: HTMLUListElement = document.createElement('ul');
-  div.innerHTML = '';
   div.appendChild(ul);
 
   console.log(ev);
@@ -46,7 +45,7 @@ sequence$.subscribe((ev: Object[]) => {
 
 function search(term: string): Observable<Object[]> {
   if (term === '') {
-    return of([{}]);
+    return of([]);
   }
 
   return ajax(`https://api.github.com/search/repositories?q=${term}`).pipe(
