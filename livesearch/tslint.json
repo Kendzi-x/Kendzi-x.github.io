@@ -156,7 +156,7 @@
             "check-module"
         ],
         "ordered-imports": [
-            true,
+            false,
             {
                 "import-sources-order": "any",
                 "named-imports-order": "case-insensitive"
