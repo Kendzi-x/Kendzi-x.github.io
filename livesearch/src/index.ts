@@ -23,11 +23,15 @@ const sequence$: Observable<Object[]> = fromEvent(el, 'input').pipe(
 const div: HTMLElement = document.getElementById('list');
 
 sequence$.subscribe((ev: Object[]) => {
+  if (Object.keys(ev[0]).length === 0) {
+    div.innerHTML = '';
+    return;
+  }
   const ul: HTMLUListElement = document.createElement('ul');
   div.innerHTML = '';
   div.appendChild(ul);
 
-  console.log(ev, 'type ==> ', typeof ev);
+  console.log(ev);
 
   for (let i: number = 0; i < ev.length; i++) {
     const li: HTMLLIElement = document.createElement('li');
