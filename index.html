@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Index page</title>
-</head>
-<body>
-  Hello!
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet" />
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Github Pages</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="">Home</a>
+            <a class="nav-link" href="">Resume</a>
+            <a class="nav-link" href="">Contacts</a>
+          </nav>
+        </div>
+      </header>
+
+      <h1 class="cover-heading">Projects:</h1>
+      <p class="lead">
+        <div class="container" style="margin-top:30px; width: 80%">
+          <div class="row">
+            <div class="col-sm-8">
+                livesearch по репозиториям Github на Typescript, используя реактивный подход RxJs.
+            </div>
+            <div class="col-sm-4">
+              <a href="https://kendzi-x.github.io/livesearch/" target="_blank" class="btn btn-secondary">livesearch</a>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+              <div class="col-sm-8">
+                  A simple widget based on Angular v.7.2.4.
+              </div>
+              <div class="col-sm-4">
+                <a href="https://kendzi-x.github.io/my-widgets/" target="_blank" class="btn btn-secondary">ng-widget</a>
+              </div>
+            </div>
+        </div>
+      </p>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+            © 2019 by Kendzi.
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
